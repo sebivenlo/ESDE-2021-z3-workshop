@@ -6,3 +6,4 @@ Or(Not(Tie), Shirt),
 Or(Not(Tie), Not(Shirt)))
 print(s.check())
 print(s.model())
+
