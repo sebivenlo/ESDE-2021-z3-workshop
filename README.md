@@ -24,9 +24,9 @@ docker exec -it z3-container z3 --version
 The output should be the version of Z3, for example `Z3 version 4.8.12 - 64 bit`.
 
 ## Usage
-To use Python with Z3 from within the container, use the following command to copy the script to the container, then execute the file within the container. Replace `script.py` after `docker cp` with the name of your script, if required.
+To use Python with Z3 from within the container, use the following command to copy the script to the container, then execute the file within the container. Replace `tasks.py` after `docker cp` with the name of your script, if required.
 ```bash
-docker cp tasks.py z3-container:/usr/src/app/tasks.py && docker exec -it z3-container python script.py
+docker cp tasks.py z3-container:/usr/src/app/tasks.py && docker exec -it z3-container python tasks.py
 ```
 
 # Workshop
