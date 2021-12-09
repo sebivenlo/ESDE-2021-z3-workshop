@@ -17,7 +17,9 @@ s = Solver()
 # 
 # An example for the syntax: s.add(Or(Not(Shoe, Hat)))
 #  not(shoe) or hat = s.add(Or(Not(Shoe), Hat))
-# work here FOR TASK
+### SOLUTION
+s.add(Or(Shoe,Hat))
+### END SOLUTION
 print("\n=== Checking task 1.1 ===\n")
 print(s.check())
 print(s.model())
@@ -31,7 +33,9 @@ s = Solver()
 # 
 # An example for the syntax: s.add(Or(Not(Shoe, Hat)))
 #  not(shoe) or hat = s.add(Or(Not(Shoe), Hat))
-# work here FOR TASK
+### SOLUTION
+s.add(And(And(Shoe,Hat),Shirt))
+### END SOLUTION
 print("\n=== Checking task 1.2 ===\n")
 print(s.check())
 print(s.model())
@@ -47,7 +51,11 @@ s = Solver()
 # a < 3 * b
 # a % 2 == 1
 # The syntax is as follows: s.add(x + y == 1)
-# work here FOR TASK
+### SOLUTION
+s.add(a + b == 22)
+s.add(a < 3 * b)
+s.add(a % 2 == 1)
+### END SOLUTION
 print("\n=== Checking task 2.1 ===\n")
 print(s.check())
 print(s.model())
@@ -56,11 +64,15 @@ print(s.model())
 x, y = Int("x"), Int("y")
 s = Solver()
 ## TODO Add the following equations to the solver:
-# x - b = 0
-# x < 19 * b
+# x - y = 0
+# x < 19 * y
 # a % 2 == 1
 # The syntax is as follows: s.add(x + y == 1)
-# work here FOR TASK
+### SOLUTION
+s.add(x - y == 0)
+s.add(x < 19 * y)
+s.add(x % 2 == 1)
+### END SOLUTION
 print("\n=== Checking task 2.2 ===\n")
 print(s.check())
 print(s.model())
@@ -78,7 +90,11 @@ s = Solver()
 x = Const("x", Season)
 # TODO Add the constraints so that ONLY SPRING is shown
 # Syntax: s.add(x != DataType.field)
-# work here FOR TASK
+### SOLUTION
+s.add(x != Season.summer)
+s.add(x != Season.autumn)
+s.add(x != Season.winter)
+### END SOLUTION
 print("\n=== Checking task 3.1 ===\n")
 print(s.check())
 print(s.model())
@@ -86,9 +102,11 @@ print(s.model())
 # Task 3.2
 s = Solver()
 x = Const("x", Season)
-# TODO Add the constraints so that spring is NOT shown
+# TODO Add the constraints so that SPRING is NOT shown
 # Syntax: s.add(x != DataType.field)
-# work here FOR TASK
+### SOLUTION
+s.add(x != Season.spring)
+### END SOLUTION
 print("\n=== Checking task 3.2 ===\n")
 print(s.check())
 print(s.model())
