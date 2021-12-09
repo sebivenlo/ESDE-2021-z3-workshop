@@ -11,7 +11,7 @@ git clone https://github.com/sebivenlo/ESDE-2021-z3-workshop.git z3-workshop/
 cd z3-workshop/workshop
 ```
 ## Building the Base Image
-After cloning the repository, build the base image and start the container in the background.
+After cloning the repository, build the base image and start the container in the background. Note: On Linux, you might have to use `sudo` before each docker command.
 ```bash
 docker build -t docker-python .
 docker run --name z3-container -td docker-python
