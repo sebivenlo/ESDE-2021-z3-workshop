@@ -21,7 +21,7 @@ You can verify that z3 has been installed correctly by executing `z3 --version` 
 ```bash
 docker exec -it z3-container z3 --version
 ```
-The output should be the version of Z3, for example `Z3 version 4.8.12 - 64 bit`.
+The output should be the version of Z3, for example `Z3 version 4.8.12 - 64 bit`. This could be different depending on your operating system.
 
 ## Usage
 To use Python with Z3 from within the container, use the following command to copy the script to the container, then execute the file within the container. Replace `tasks.py` after `docker cp` with the name of your script, if required.
